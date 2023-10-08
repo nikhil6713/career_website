@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center mt-4 mb-4">Carrers</h1>
+        <h1 class="text-center mt-4 mb-4">{{company_name}} Carrers</h1>
         <img id="banner" src="/static/banner.jpg">
         <h2 class="text-center mt-2 mb-2">About Carrers </h2>
         <p class="lead">
@@ -32,7 +32,11 @@
             sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <h2 class="text-center mt-2 mb-2">Open Positions</h2>
-        <p>TODO - Show the jobs here</p>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
         <div class="text-center">
             <button class="btn btn-secondary btn-lg">Contact Us</button>
             <p class="mt-2 mb-2">Copyright 2023, Nikhil</p>
